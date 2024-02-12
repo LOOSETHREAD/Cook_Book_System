@@ -216,6 +216,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="7" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
+<<<<<<< HEAD
                       <Component id="pictureBox3" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="jTextField1" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -237,6 +238,29 @@
           <Properties>
             <Property name="image" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/CookHub/image/cookhub-high-resolution-logo-transparent (2) (6).png"/>
+=======
+                      <Component id="jTextField1" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="pictureBox3" min="-2" pref="80" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Search"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="CookHub.components.PictureBox" name="pictureBox3">
+          <Properties>
+            <Property name="image" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/CookHub/image/cookhub-high-resolution-logo-transparent (1).png"/>
+>>>>>>> origin/master
             </Property>
           </Properties>
 
