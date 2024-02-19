@@ -1,8 +1,11 @@
 package CookHub.main;
 
-import CookHub.main.login;
+
+import controller.UserController;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import java.util.Arrays;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -110,9 +113,24 @@ public void close(){
     }//GEN-LAST:event_conPassActionPerformed
 
     private void reg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg1ActionPerformed
-       close();
-        login lg = new login();
-       lg.setVisible(true);
+       
+        controller.UserController theController = new UserController();
+        String username = newName1.getText();
+        char[] password = newPass1.getPassword();
+        
+        if (  Arrays.equals(newPass1.getPassword(), conPass.getPassword())) {
+            System.out.println("Created - " +theController.addUserToDatabase(new Model.User(username, password)));
+            JOptionPane.showMessageDialog(null, "User Added!!");
+            close();
+            login lg = new login();
+            lg.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "Password doesn't match! Try Again!");
+            newName1.setText("");
+            newPass1.setText("");
+            conPass.setText("");
+        }
+  
     }//GEN-LAST:event_reg1ActionPerformed
 
     private void newName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newName1ActionPerformed

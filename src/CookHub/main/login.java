@@ -3,6 +3,8 @@ package CookHub.main;
 
 
 
+import Model.User;
+import controller.UserController;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
@@ -170,6 +172,11 @@ public void close(){
     }//GEN-LAST:event_regActionPerformed
 
     private void logActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logActionPerformed
+        UserController theController = new UserController();
+        String username = Name.getText();
+        char[] password = Pass.getPassword();
+        User loggedIn = theController.getUser(new User(username, password));
+System.out.println("Logged IN - " +loggedIn.getUsername());
         close();
         Main main = new Main();
         main.setVisible(true);
